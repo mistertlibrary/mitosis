@@ -21,7 +21,7 @@
       --border:       rgba(120,165,230,0.2);
       --interphase:   #FFD600;   /* pure Memphis yellow   */
       --prophase:     #00E8B0;   /* electric teal/mint    */
-      --metaphase:    #BF40FF;   /* vivid violet          */
+      --metaphase:    #D060FF;   /* vivid violet — lightened for contrast  */
       --anaphase:     #FF5500;   /* hot orange-red        */
       --telophase:    #32FF7A;   /* electric green        */
       --db-accent:    #FF2D78;   /* hot pink — databases  */
@@ -43,7 +43,7 @@
     /* ── SECTION PATTERN OVERLAYS (Memphis texture) ──────────────── */
     #interphase { background-image: repeating-linear-gradient(45deg,  transparent, transparent 14px, rgba(255,214,0,0.035)    14px, rgba(255,214,0,0.035)    16px); }
     #prophase   { background-image: radial-gradient(circle, rgba(0,232,176,0.055)  1.5px, transparent 1.5px); background-size: 22px 22px; }
-    #metaphase  { background-image: repeating-linear-gradient(-45deg, transparent, transparent 14px, rgba(191,64,255,0.04)    14px, rgba(191,64,255,0.04)    16px); }
+    #metaphase  { background-image: repeating-linear-gradient(-45deg, transparent, transparent 14px, rgba(208,96,255,0.04)    14px, rgba(208,96,255,0.04)    16px); }
     #anaphase   { background-image: repeating-linear-gradient(90deg,  transparent, transparent 18px, rgba(255,85,0,0.035)     18px, rgba(255,85,0,0.035)     20px); }
     #telophase  { background-image: radial-gradient(circle, rgba(50,255,122,0.06) 1.5px, transparent 1.5px); background-size: 20px 20px; }
 
@@ -99,7 +99,7 @@
       position: fixed; inset: 0; pointer-events: none; z-index: 0;
       background:
         radial-gradient(ellipse 70% 55% at 12% 18%, rgba(0,232,176,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 70% at 88% 82%, rgba(191,64,255,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 70% at 88% 82%, rgba(208,96,255,0.08) 0%, transparent 60%),
         radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255,214,0,0.05) 0%, transparent 70%);
     }
 
@@ -263,7 +263,7 @@
     }
     .hero-sub-2 {
       font-family: var(--font-display); font-style: italic;
-      font-size: 0.98rem; color: rgba(138,171,206,0.65);
+      font-size: 0.98rem; color: rgba(138,171,206,0.82);
       margin-bottom: 2.8rem;
       opacity: 0; animation: fadeUp 0.9s ease 0.78s forwards;
     }
@@ -317,7 +317,7 @@
     }
     #interphase::before { top: -120px; right: -220px; background: radial-gradient(ellipse, rgba(255,214,0,0.055) 0%, transparent 65%); }
     #prophase::before   { top: -60px;  left: -220px;  background: radial-gradient(ellipse, rgba(0,232,176,0.045) 0%, transparent 65%); }
-    #metaphase::before  { top: -90px;  right: -200px; background: radial-gradient(ellipse, rgba(191,64,255,0.055) 0%, transparent 65%); }
+    #metaphase::before  { top: -90px;  right: -200px; background: radial-gradient(ellipse, rgba(208,96,255,0.055) 0%, transparent 65%); }
     #anaphase::before   { top: -70px;  left: -200px;  background: radial-gradient(ellipse, rgba(255,85,0,0.045) 0%, transparent 65%); }
     #telophase::before  { top: -90px;  right: -200px; background: radial-gradient(ellipse, rgba(50,255,122,0.045) 0%, transparent 65%); }
 
@@ -364,7 +364,7 @@
     }
     .callout-gold   { border-color: var(--interphase); background: rgba(255,214,0,0.11); }
     .callout-teal   { border-color: var(--prophase);   background: rgba(0,232,176,0.10); }
-    .callout-indigo { border-color: var(--metaphase);  background: rgba(191,64,255,0.10); }
+    .callout-indigo { border-color: var(--metaphase);  background: rgba(208,96,255,0.10); }
 
     /* ── INTRO BOX ─────────────────────────────────────────────── */
     .intro-box {
@@ -441,7 +441,7 @@
     }
     .resource-card h3 { font-family: var(--font-accent); font-size: 0.92rem; font-weight: 600; line-height: 1.3; color: var(--text); letter-spacing: 0.01em; }
     .resource-card p  { font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
-    .resource-url     { font-family: var(--font-accent); font-size: 0.72rem; opacity: 0.45; font-style: normal; margin-top: auto; letter-spacing: 0.03em; }
+    .resource-url     { font-family: var(--font-accent); font-size: 0.75rem; opacity: 0.58; font-style: normal; margin-top: auto; letter-spacing: 0.03em; }
 
     /* ── MEDIUM TABS ───────────────────────────────────────────── */
     .medium-tabs {
@@ -495,7 +495,7 @@
       outline: none; font-weight: 300;
     }
     textarea.prompt-field:focus { border-color: var(--phase-color); }
-    textarea.prompt-field::placeholder { color: rgba(138,171,206,0.3); font-style: italic; }
+    textarea.prompt-field::placeholder { color: rgba(138,171,206,0.52); font-style: italic; }
     .save-indicator {
       font-family: var(--font-accent); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--prophase); opacity: 0; transition: opacity 0.4s ease;
@@ -657,14 +657,14 @@
     <div class="hero-cell" style="animation: cellDivideA 28s ease-in-out infinite;"></div>
     <div class="hero-cell" style="
       animation: cellDivideB 28s ease-in-out infinite;
-      background: radial-gradient(ellipse at 60% 36%, rgba(0,232,176,0.05) 0%, rgba(191,64,255,0.025) 45%, transparent 72%);
+      background: radial-gradient(ellipse at 60% 36%, rgba(0,232,176,0.05) 0%, rgba(208,96,255,0.025) 45%, transparent 72%);
       border-color: rgba(0,232,176,0.1);
     "></div>
     <div class="hero-cell-inner"></div>
     <div class="hero-nucleus" style="animation: nucleusDivide 28s ease-in-out infinite;"></div>
     <div class="hero-orga" style="width:10px;height:10px;top:27%;left:23%;animation-delay:0s;opacity:0.5;"></div>
     <div class="hero-orga" style="width:6px;height:6px;top:65%;left:28%;animation-delay:2.4s;opacity:0.38;"></div>
-    <div class="hero-orga" style="width:12px;height:12px;top:37%;left:73%;animation-delay:4.2s;opacity:0.42;background:rgba(191,64,255,0.32);"></div>
+    <div class="hero-orga" style="width:12px;height:12px;top:37%;left:73%;animation-delay:4.2s;opacity:0.42;background:rgba(208,96,255,0.32);"></div>
     <div class="hero-orga" style="width:7px;height:7px;top:72%;left:69%;animation-delay:1.5s;opacity:0.38;"></div>
     <div class="hero-orga" style="width:5px;height:5px;top:21%;left:59%;animation-delay:3.3s;opacity:0.48;background:rgba(255,214,0,0.45);"></div>
     <div class="hero-orga" style="width:9px;height:9px;top:58%;left:17%;animation-delay:0.9s;opacity:0.33;"></div>
@@ -871,7 +871,7 @@
         <path d="M0 20 Q37.5 5 75 20 Q112.5 35 150 20 Q187.5 5 225 20 Q262.5 35 300 20 Q337.5 5 375 20 Q412.5 35 450 20 Q487.5 5 525 20 Q562.5 35 600 20 Q637.5 5 675 20 Q712.5 35 750 20 Q787.5 5 825 20 Q862.5 35 900 20" fill="none" stroke="rgba(120,165,230,0.40)" stroke-width="1.5"/>
         <polygon points="437,7 444,20 430,20" fill="none" stroke="rgba(0,232,176,0.65)" stroke-width="1.3"/>
         <circle cx="458" cy="13" r="4.5" fill="none" stroke="rgba(255,214,0,0.65)" stroke-width="1.3"/>
-        <polygon points="474,20 481,12 488,20 481,28" fill="none" stroke="rgba(191,64,255,0.65)" stroke-width="1.3"/>
+        <polygon points="474,20 481,12 488,20 481,28" fill="none" stroke="rgba(208,96,255,0.65)" stroke-width="1.3"/>
       </svg>
     </div>
   </div>
@@ -1026,7 +1026,7 @@
       <svg viewBox="0 0 900 40" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
         <path d="M0 20 Q37.5 5 75 20 Q112.5 35 150 20 Q187.5 5 225 20 Q262.5 35 300 20 Q337.5 5 375 20 Q412.5 35 450 20 Q487.5 5 525 20 Q562.5 35 600 20 Q637.5 5 675 20 Q712.5 35 750 20 Q787.5 5 825 20 Q862.5 35 900 20" fill="none" stroke="rgba(120,165,230,0.40)" stroke-width="1.5"/>
         <rect x="432" y="9" width="14" height="14" rx="0" transform="rotate(15,439,16)" fill="none" stroke="rgba(0,232,176,0.65)" stroke-width="1.3"/>
-        <circle cx="458" cy="20" r="6" fill="none" stroke="rgba(191,64,255,0.65)" stroke-width="1.3"/>
+        <circle cx="458" cy="20" r="6" fill="none" stroke="rgba(208,96,255,0.65)" stroke-width="1.3"/>
         <circle cx="473" cy="14" r="2.5" fill="rgba(255,214,0,0.65)" stroke="none"/>
         <circle cx="473" cy="26" r="2.5" fill="rgba(255,214,0,0.65)" stroke="none"/>
       </svg>
@@ -1037,7 +1037,7 @@
   <section id="metaphase" class="phase">
     <!-- organelles: spindle apparatus, aligned chromosomes at metaphase plate -->
     <div class="org-layer" aria-hidden="true">
-      <svg class="org-svg" style="width:340px;top:4%;right:-40px;color:rgba(191,64,255,0.11);animation-duration:21s;" viewBox="0 0 200 130">
+      <svg class="org-svg" style="width:340px;top:4%;right:-40px;color:rgba(208,96,255,0.11);animation-duration:21s;" viewBox="0 0 200 130">
         <line x1="10"  y1="65" x2="100" y2="42" stroke-width="0.9"/>
         <line x1="10"  y1="65" x2="100" y2="55" stroke-width="0.9"/>
         <line x1="10"  y1="65" x2="100" y2="65" stroke-width="0.9"/>
@@ -1056,7 +1056,7 @@
         <circle cx="10"  cy="65" r="5" stroke-width="1.2"/>
         <circle cx="190" cy="65" r="5" stroke-width="1.2"/>
       </svg>
-      <svg class="org-svg" style="width:200px;bottom:8%;left:-10px;color:rgba(191,64,255,0.11);animation-duration:18s;animation-delay:4s;" viewBox="0 0 110 70">
+      <svg class="org-svg" style="width:200px;bottom:8%;left:-10px;color:rgba(208,96,255,0.11);animation-duration:18s;animation-delay:4s;" viewBox="0 0 110 70">
         <line x1="5"   y1="35" x2="55" y2="20" stroke-width="1"/>
         <line x1="5"   y1="35" x2="55" y2="35" stroke-width="1"/>
         <line x1="5"   y1="35" x2="55" y2="50" stroke-width="1"/>
@@ -1072,26 +1072,26 @@
     <div class="memphis-layer" aria-hidden="true">
       <!-- Diamond cluster, far bottom-left -->
       <svg class="m-shape" style="width:100px;bottom:12%;left:-8px;animation-duration:25s;animation-delay:3s;" viewBox="0 0 50 80">
-        <polygon points="25,5  45,25 25,45 5,25"  fill="none" stroke="rgba(191,64,255,0.31)" stroke-width="1.8"/>
-        <polygon points="25,35 38,48 25,61 12,48" fill="none" stroke="rgba(191,64,255,0.22)"  stroke-width="1.4"/>
+        <polygon points="25,5  45,25 25,45 5,25"  fill="none" stroke="rgba(208,96,255,0.31)" stroke-width="1.8"/>
+        <polygon points="25,35 38,48 25,61 12,48" fill="none" stroke="rgba(208,96,255,0.22)"  stroke-width="1.4"/>
       </svg>
       <!-- Horizontal parallel bars, top-right -->
       <svg class="m-shape" style="width:75px;top:8%;right:1%;animation-duration:29s;animation-delay:6s;" viewBox="0 0 36 44">
-        <line x1="0" y1="6"  x2="36" y2="6"  stroke="rgba(191,64,255,0.31)" stroke-width="2.5"/>
-        <line x1="0" y1="16" x2="36" y2="16" stroke="rgba(191,64,255,0.24)" stroke-width="2.5"/>
-        <line x1="0" y1="26" x2="36" y2="26" stroke="rgba(191,64,255,0.18)" stroke-width="2.5"/>
-        <line x1="0" y1="36" x2="36" y2="36" stroke="rgba(191,64,255,0.13)" stroke-width="2.5"/>
+        <line x1="0" y1="6"  x2="36" y2="6"  stroke="rgba(208,96,255,0.31)" stroke-width="2.5"/>
+        <line x1="0" y1="16" x2="36" y2="16" stroke="rgba(208,96,255,0.24)" stroke-width="2.5"/>
+        <line x1="0" y1="26" x2="36" y2="26" stroke="rgba(208,96,255,0.18)" stroke-width="2.5"/>
+        <line x1="0" y1="36" x2="36" y2="36" stroke="rgba(208,96,255,0.13)" stroke-width="2.5"/>
       </svg>
       <!-- Scattered dots, mid-left -->
       <svg class="m-shape" style="width:50px;top:45%;left:1%;animation-duration:21s;animation-delay:10s;" viewBox="0 0 24 24">
-        <circle cx="5"  cy="5"  r="3" fill="rgba(191,64,255,0.40)"/>
-        <circle cx="19" cy="5"  r="3" fill="rgba(191,64,255,0.26)"/>
-        <circle cx="12" cy="17" r="4" fill="rgba(191,64,255,0.22)"/>
+        <circle cx="5"  cy="5"  r="3" fill="rgba(208,96,255,0.40)"/>
+        <circle cx="19" cy="5"  r="3" fill="rgba(208,96,255,0.26)"/>
+        <circle cx="12" cy="17" r="4" fill="rgba(208,96,255,0.22)"/>
       </svg>
     </div>
     <div class="phase-inner">
       <h2 class="reveal reveal-d1">Understanding Your Medium</h2>
-      <svg class="h2-squiggle reveal reveal-d1" aria-hidden="true" viewBox="0 0 130 12"><path d="M0 6 Q16 0 32 6 Q48 12 65 6 Q82 0 98 6 Q114 12 130 6" stroke="rgba(191,64,255,0.65)" fill="none" stroke-width="2.8"/></svg>
+      <svg class="h2-squiggle reveal reveal-d1" aria-hidden="true" viewBox="0 0 130 12"><path d="M0 6 Q16 0 32 6 Q48 12 65 6 Q82 0 98 6 Q114 12 130 6" stroke="rgba(208,96,255,0.65)" fill="none" stroke-width="2.8"/></svg>
       <p class="phase-subtitle reveal reveal-d2">Every medium has a history, a grammar, and ends it accomplishes that no other medium can.</p>
 
       <div class="reveal reveal-d2">
@@ -1219,8 +1219,8 @@
       <svg viewBox="0 0 900 40" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
         <path d="M0 20 Q37.5 5 75 20 Q112.5 35 150 20 Q187.5 5 225 20 Q262.5 35 300 20 Q337.5 5 375 20 Q412.5 35 450 20 Q487.5 5 525 20 Q562.5 35 600 20 Q637.5 5 675 20 Q712.5 35 750 20 Q787.5 5 825 20 Q862.5 35 900 20" fill="none" stroke="rgba(120,165,230,0.40)" stroke-width="1.5"/>
         <polygon points="437,6 450,26 424,26" fill="none" stroke="rgba(255,85,0,0.65)" stroke-width="1.3"/>
-        <line x1="459" y1="8" x2="475" y2="32" stroke="rgba(191,64,255,0.65)" stroke-width="1.5"/>
-        <line x1="468" y1="8" x2="484" y2="32" stroke="rgba(191,64,255,0.65)" stroke-width="1.5"/>
+        <line x1="459" y1="8" x2="475" y2="32" stroke="rgba(208,96,255,0.65)" stroke-width="1.5"/>
+        <line x1="468" y1="8" x2="484" y2="32" stroke="rgba(208,96,255,0.65)" stroke-width="1.5"/>
         <circle cx="490" cy="20" r="4" fill="rgba(255,85,0,0.55)" stroke="none"/>
       </svg>
     </div>
